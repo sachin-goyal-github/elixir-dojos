@@ -18,4 +18,32 @@ defmodule DataStructuresDojo do
 
     IO.puts(weight)
   end
+
+  def lists do
+    list1 = [1, 2, 3, 4]
+    list2 = [5, 6, 7, 8]
+
+    list3 = list1 ++ list2
+
+    list4 = list3 -- list1
+
+    IO.puts(6 in list4)
+
+    [head | tail] = list3
+
+    IO.puts("Head #{head}")
+    IO.write("Tail: ")
+    IO.inspect(tail)
+
+    words = ["One", "Two", "Three"]
+
+    Enum.each(words, fn word ->
+      IO.puts(word)
+    end)
+
+    words = List.delete_at(words, 1)
+    IO.puts(words)
+    words = List.insert_at(words, 1, "Two")
+    IO.puts(words)
+  end
 end
