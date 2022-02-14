@@ -45,5 +45,25 @@ defmodule DataStructuresDojo do
     IO.puts(words)
     words = List.insert_at(words, 1, "Two")
     IO.puts(words)
+
+
+    [_, [_, a]] = [10, [20, 30]]
+    IO.puts(a)
+  end
+
+  def maps do
+    kv = %{"key1" => "value1", "key2" => "value2", "key3" => "value3"}
+    IO.puts(kv["key1"])
+
+    kv = %{:key1 => "value1", :key2 => "value2", :key3 => "value3"}
+    IO.puts(kv[:key1])
+
+    kv = %{1 => "value1", 2 => "value2", 3 => "value3"}
+    IO.puts(kv[1])
+
+    kv = %{1 => 1, 2 => "value2", 3 => 2}
+    IO.puts(kv[1])
+    IO.puts(kv[2])
+
   end
 end
