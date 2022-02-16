@@ -13,5 +13,26 @@ defmodule FunctionsDojos do
 
     IO.puts(print_sum.({4, 5}))
     IO.puts(print_sum.({4, 5, 6}))
+
+    IO.puts(fun_with_default_values())
+    IO.puts(fun_with_default_values(3))
+    IO.puts(fun_with_default_values(3, 4))
+
+    IO.puts(factorial(4))
+    IO.puts(factorial(3))
+    IO.puts(factorial(2))
+  end
+
+  def fun_with_default_values(x \\ 1, y \\ 2) do
+    x + y
+  end
+
+  def factorial(num) do
+    if num <= 1 do
+      1
+    else
+      result = num * factorial(num - 1)
+      result
+    end
   end
 end
