@@ -6,7 +6,7 @@ Sample:
 ```
 iex
 
-c("basic.ex")
+c("basics/basic.ex")
 
 BasicDojos.main
 
